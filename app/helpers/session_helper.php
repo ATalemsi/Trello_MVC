@@ -19,7 +19,7 @@
         $_SESSION[$name. '_class'] = $class;
       } elseif(empty($message) && !empty($_SESSION[$name])){
         $class = !empty($_SESSION[$name. '_class']) ? $_SESSION[$name. '_class'] : '';
-        echo '<div class="bg-green-500 text-white p-4 mb-4 rounded-md ' . $class . '" id="msg-flash">' . $_SESSION[$name] . '</div>';
+        echo '<div class="bg-green-300 text-green p-4 mb-4 rounded-md ' . $class . '" id="msg-flash">' . $_SESSION[$name] . '</div>';
         unset($_SESSION[$name]);
         unset($_SESSION[$name. '_class']);
       }

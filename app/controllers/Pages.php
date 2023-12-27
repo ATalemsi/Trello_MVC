@@ -1,11 +1,13 @@
 <?php
   class Pages extends Controller {
-     private $userModel;
     public function __construct(){
-          $this->userModel=$this->model('User');
+          
     }
 
     public function index(){
+      if (isLoggedIn()) {
+        redirect('projects');
+      }
       
       $data= [
         'title'=>'Welcome',

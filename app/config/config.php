@@ -7,5 +7,5 @@ define('DB_NAME','trello_mvc');
 //App rout
 
 define('APPROOT',dirname(dirname(__FILE__))) ; 
-define('URLROOT','http://localhost/Breif_9MVC/') ; 
-define('SITENAME','bv  ') ; 
+define('URLROOT','http://localhost/Breif_9MVC') ; 
+define('SITENAME','TrelloMVC  ') ; 
