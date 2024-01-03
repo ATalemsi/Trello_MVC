@@ -75,5 +75,3 @@ class Database{
         return $this->stmt->rowCount();
      }
     }
-
- 

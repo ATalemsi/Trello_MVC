@@ -5,3 +5,4 @@ document.getElementById('burgerMenuButton').addEventListener('click', function (
 document.getElementById('closeBurgerMenu').addEventListener('click', function () {
     document.getElementById('burgerMenu').classList.add('hidden');
 });
+

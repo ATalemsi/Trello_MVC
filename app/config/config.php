@@ -1,11 +1,10 @@
-<?php 
+<?php
 //DBParams
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','trello_mvc');
+const DB_HOST = 'localhost';
+const DB_USER = 'root';
+const DB_PASS = '';
+const DB_NAME = 'trello_mvc';
 //App rout
 
-define('APPROOT',dirname(dirname(__FILE__))) ; 
-define('URLROOT','http://localhost/Breif_9MVC') ; 
-define('SITENAME','TrelloMVC  ') ; 
+define('APPROOT',dirname(dirname(__FILE__))) ;
+const URLROOT = 'http://localhost/Breif_9MVC';

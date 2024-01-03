@@ -6,7 +6,7 @@ class Projects extends Controller{
       if (!isLoggedIn()){
         redirect('users/login');
       }
-      $this->projectModel = $this->model('project');  
+      $this->projectModel = $this->model('project');
     }
 
     public function index(){
@@ -41,7 +41,7 @@ class Projects extends Controller{
                redirect('projects');
               # code...
             }else {
-              die('Something  went wrong ');
+              die('Something went wrong ');
             }
 
             
@@ -61,10 +61,7 @@ class Projects extends Controller{
       }
       
     }
-  public function show($id){
-    $data =[];
-    $this->view('projects/show',$data);
-  }
+
   public function edit($id){
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //sanitize POST array
@@ -125,5 +122,16 @@ class Projects extends Controller{
         die('Something went wrong');
       }
   }
+  public function statistics($projectId) {
+    $project = $this->projectModel->getProjectById($projectId);
+    $statistics = $this->projectModel->getProjectStatistics($projectId);
 
+    $data = [
+        'project' => $project,
+        'statistics' => $statistics,
+    ];
+
+    // Load the statistics view (create a new view file for statistics)
+    $this->view('projects/statistics', $data);
+}
 }
